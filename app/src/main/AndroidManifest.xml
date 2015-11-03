@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.easein" >
 
+    <permission
+        android:name="com.parse.anywall.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" >
+    </permission>
+
+    <uses-permission android:name="com.parse.anywall.permission.MAPS_RECEIVE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -37,6 +43,14 @@
         <activity
             android:name=".GooglePlayServicesActivity"
             android:label="@string/title_activity_google_play_services" >
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name=".Post"
+            android:label="@string/title_activity_post" >
         </activity>
     </application>
 

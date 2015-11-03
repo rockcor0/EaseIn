@@ -14,6 +14,10 @@
       <excludeFolder url="file://$MODULE_DIR$/.gradle" />
     </content>
     <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Android API 22 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="google-play-services" level="project" />
+    <orderEntry type="library" name="libs" level="project" />
+    <orderEntry type="module" module-name="google-play-services_lib" />
   </component>
 </module>
