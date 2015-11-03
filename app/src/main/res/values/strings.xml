@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">EaseIn</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_google_play_services">GooglePlayServicesActivity</string>
+</resources>
