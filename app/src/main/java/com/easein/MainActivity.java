@@ -1,11 +1,5 @@
 package com.easein;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
@@ -30,11 +24,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap.CancelableCallback;
 import com.google.android.gms.maps.GoogleMap.OnCameraChangeListener;
@@ -52,6 +46,12 @@ import com.parse.ParseException;
 import com.parse.ParseGeoPoint;
 import com.parse.ParseQuery;
 import com.parse.ParseQueryAdapter;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class MainActivity extends FragmentActivity implements LocationListener,
     GoogleApiClient.ConnectionCallbacks,
@@ -393,7 +393,7 @@ public class MainActivity extends FragmentActivity implements LocationListener,
    */
   public void onConnected(Bundle bundle) {
     if (Application.APPDEBUG) {
-      Log.d("Connected to location services", Application.APPTAG);
+      Log.d("Conectado", Application.APPTAG);
     }
     currentLocation = getLocation();
     startPeriodicUpdates();
@@ -404,7 +404,7 @@ public class MainActivity extends FragmentActivity implements LocationListener,
    */
   public void onDisconnected() {
     if (Application.APPDEBUG) {
-      Log.d("Disconnected from location services", Application.APPTAG);
+      Log.d("Disconnected", Application.APPTAG);
     }
   }
 
