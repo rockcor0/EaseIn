@@ -13,7 +13,7 @@
     <string name="logout_full">Salir de EaseIn</string>
     <string name="post">Marcar punto</string>
     <string name="prompt_post">Marcar punto</string>
-    <string name="post_out_of_range">No se pueden ver los espacios. Reiniciar</string>
+    <string name="post_out_of_range">No se puede ver los espacios. Reiniciar</string>
     <string name="progress_post">Publicando&#8230;</string>
     <string name="settings_distance_format">%d pies</string>
     <string name="activity_post_title">Publicar un espacio accesible</string>
