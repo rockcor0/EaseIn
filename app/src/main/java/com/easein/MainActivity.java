@@ -103,22 +103,18 @@ public class MainActivity extends FragmentActivity implements LocationListener,
 
   // Maximum post search radius for map in kilometers
   private static final int MAX_POST_SEARCH_DISTANCE = 100;
-
+  // Fields for helping process map and location changes
+  private final Map<String, Marker> mapMarkers = new HashMap<String, Marker>();
   /*
    * Other class member variables
    */
   // Map fragment
   private SupportMapFragment mapFragment;
-
   // Represents the circle around a map
   private Circle mapCircle;
-
   // Fields for the map radius in feet
   private float radius;
   private float lastRadius;
-
-  // Fields for helping process map and location changes
-  private final Map<String, Marker> mapMarkers = new HashMap<String, Marker>();
   private int mostRecentMapUpdate;
   private boolean hasSetUpInitialLocation;
   private String selectedPostObjectId;
@@ -791,5 +787,4 @@ public class MainActivity extends FragmentActivity implements LocationListener,
     }
   }
 
-    //TODO
 }
