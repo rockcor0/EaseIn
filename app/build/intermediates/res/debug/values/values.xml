@@ -30,10 +30,21 @@
     <color name="abc_search_url_text_selected">@android:color/black</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="azul_claro">#3864AF</color>
+    <color name="azul_muy_claro">#3588C8</color>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <eat-comment/>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="blanco">#FFFFFF</color>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <eat-comment/>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -62,6 +73,12 @@
     <color name="dim_foreground_material_light">#ff323232</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/src/main/res/values/colors.xml -->
+    <eat-comment/>
+    <color name="gris_claro">#CDCDCF</color>
+    <color name="gris_oscuro">#A7A9AC</color>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <eat-comment/>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
