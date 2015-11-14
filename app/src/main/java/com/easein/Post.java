@@ -38,4 +38,6 @@ public class Post extends ParseObject {
   public static ParseQuery<Post> getQuery() {
     return ParseQuery.getQuery(Post.class);
   }
+
+  //TODO
 }

@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.easein" >
-
-    <permission
-        android:name="com.parse.anywall.permission.MAPS_RECEIVE"
-        android:protectionLevel="signature" >
-    </permission>
+    package="com.easein"
+    android:versionCode="1"
+    android:versionName="1.0">
 
     <uses-permission android:name="com.parse.anywall.permission.MAPS_RECEIVE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -20,6 +17,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
+        android:name=".Application"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -32,8 +30,32 @@
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" >
+
+        </activity>
+
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".SignUpActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".DispatchActivity"
+            android:noHistory="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -41,17 +63,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".GooglePlayServicesActivity"
-            android:label="@string/title_activity_google_play_services" >
-        </activity>
+            android:name=".WelcomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo" />
         <activity
-            android:name=".MainActivity"
-            android:label="@string/title_activity_main" >
-        </activity>
+            android:name=".PostActivity"
+            android:label="@string/activity_post_title"
+            android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".Post"
-            android:label="@string/title_activity_post" >
-        </activity>
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" />
+
     </application>
 
 </manifest>

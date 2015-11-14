@@ -116,4 +116,6 @@ public class PostActivity extends Activity {
     String characterCountString = String.format("%d/%d", postEditText.length(), maxCharacterCount);
     characterCountTextView.setText(characterCountString);
   }
+
+  //TODO
 }

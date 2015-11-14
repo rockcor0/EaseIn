@@ -21,8 +21,7 @@
         android:id="@+id/map_fragment"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_weight="1"
+        android:layout_height="354dp"
         android:layout_marginTop="16dp" />
 
     <ListView

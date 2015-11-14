@@ -11,7 +11,7 @@ public class Application extends android.app.Application {
   public static final boolean APPDEBUG = false;
 
   // Debugging tag for the application
-  public static final String APPTAG = "AnyWall";
+  public static final String APPTAG = "EaseIn";
 
   // Used to pass location from MainActivity to PostActivity
   public static final String INTENT_EXTRA_LOCATION = "location";
@@ -33,10 +33,13 @@ public class Application extends android.app.Application {
     super.onCreate();
 
     ParseObject.registerSubclass(Post.class);
-    Parse.initialize(this, "YOUR_PARSE_APPLICATION_ID",
-        "YOUR_PARSE_CLIENT_KEY");
+    Parse.initialize(this, "u458dxTIdxn0GVwMOzXBD8NzHaCZvAm62zXScLVY", "vTbHt9HEvvNrWwpEmqFDqe60ugJYpk3falqvHge8");
 
-    preferences = getSharedPreferences("com.parse.anywall", Context.MODE_PRIVATE);
+    preferences = getSharedPreferences("com.parse", Context.MODE_PRIVATE);
+
+    ParseObject testObject = new ParseObject("TestObject");
+    testObject.put("foo", "bar");
+    testObject.saveInBackground();
 
     configHelper = new ConfigHelper();
     configHelper.fetchConfigIfNeeded();
@@ -53,5 +56,5 @@ public class Application extends android.app.Application {
   public static void setSearchDistance(float value) {
     preferences.edit().putFloat(KEY_SEARCH_DISTANCE, value).commit();
   }
-
+//TODO
 }
