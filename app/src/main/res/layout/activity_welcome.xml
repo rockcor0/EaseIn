@@ -9,35 +9,48 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".WelcomeActivity">
 
-    <ImageView
-        android:id="@+id/imageViewLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:minHeight="296dp"
-        android:minWidth="250dp"
-        android:src="@mipmap/logo_inicio" />
-
-    <Button
-        android:id="@+id/login_button"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageViewLogo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
-        android:background="@drawable/btn_gris"
-        android:text="@string/login" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/signup_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/login_button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
-        android:background="@drawable/btn_registrarse"
-        android:text="@string/signup"
-        android:textColor="@color/azul_muy_claro" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageViewLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:minHeight="296dp"
+                android:minWidth="250dp"
+                android:src="@mipmap/logo_inicio" />
+
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageViewLogo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/btn_gris"
+                android:text="@string/login" />
+
+            <Button
+                android:id="@+id/signup_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/login_button"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/btn_registrarse"
+                android:text="@string/signup"
+                android:textColor="@color/azul_muy_claro" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
 
 </RelativeLayout>
