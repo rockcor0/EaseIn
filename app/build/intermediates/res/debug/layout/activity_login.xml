@@ -32,47 +32,44 @@
                 android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/prompt_username"
+                android:layout_below="@+id/imageViewLogo"
                 android:layout_marginTop="15dp"
+                android:hint="@string/prompt_username"
                 android:inputType="textEmailAddress"
                 android:maxLines="1"
-                android:layout_below="@+id/imageViewLogo"
                 android:singleLine="true" />
 
             <EditText
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/prompt_password"
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:layout_marginTop="15dp"
-                android:singleLine="true"
                 android:layout_below="@+id/username"
+                android:layout_marginTop="15dp"
+                android:hint="@string/prompt_password"
                 android:imeActionId="@+id/edittext_action_login"
                 android:imeActionLabel="@string/login"
-                android:imeOptions="actionUnspecified" />
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true" />
 
             <Button
                 android:id="@+id/action_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/password"
+                android:layout_centerHorizontal="true"
                 android:layout_gravity="end"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/btn_gris"
                 android:paddingLeft="32dp"
                 android:paddingRight="32dp"
                 android:text="@string/login"
-                android:background="@drawable/btn_gris"
-                android:layout_marginTop="15dp"
-                android:layout_below="@+id/password"
-                android:layout_centerHorizontal="true"
                 android:textColor="#ffffff" />
 
         </RelativeLayout>
 
     </ScrollView>
-
-
-
 
 
 </RelativeLayout><!-- From: file:/D:/ProyectosAndroid/EaseIn/app/src/main/res/layout/activity_login.xml -->

@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
@@ -6,12 +6,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/post_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/post"
-        android:textAppearance="?android:attr/textAppearanceSmallInverse" />
     <!--
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/post_button"
@@ -25,14 +19,27 @@
     <fragment
         android:id="@+id/map_fragment"
         android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="354dp"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="0dp" />
+
+    <Button
+        android:id="@+id/post_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/map_fragment"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="@string/post"
+        android:textAppearance="?android:attr/textAppearanceSmallInverse" />
 
     <ListView
         android:id="@+id/posts_listview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_weight="1" />
+        android:layout_below="@+id/post_button"
+        android:layout_weight="1"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp" />
 
-</LinearLayout>
+</RelativeLayout>
