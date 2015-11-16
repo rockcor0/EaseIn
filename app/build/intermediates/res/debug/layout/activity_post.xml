@@ -12,13 +12,13 @@
         android:id="@+id/post_edittext"
         android:layout_width="fill_parent"
         android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
         android:background="@null"
         android:gravity="top"
         android:hint="@string/prompt_post"
-        android:inputType="textMultiLine"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
+        android:inputType="textMultiLine">
         <requestFocus />
     </EditText>
     
@@ -36,14 +36,14 @@
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <ListView
+        android:id="@+id/listView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/listView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/post_edittext"
-        android:choiceMode="singleChoice"
-        android:background="@drawable/lista_espacio_accesible" />
+        android:background="@drawable/lista_espacio_accesible"
+        android:choiceMode="singleChoice" />
 
 
     <Button
