@@ -11,12 +11,25 @@ import com.parse.ParseUser;
  */
 @ParseClassName("Posts")
 public class Post extends ParseObject {
+
+  public static ParseQuery<Post> getQuery() {
+    return ParseQuery.getQuery(Post.class);
+  }
+
   public String getText() {
     return getString("text");
   }
 
   public void setText(String value) {
     put("text", value);
+  }
+
+  public String getTipoEspacio() {
+    return getString("tipoEspacio");
+  }
+
+  public void setTipoEspacio(String value) {
+    put("tipoEspacio", value);
   }
 
   public ParseUser getUser() {
@@ -33,10 +46,6 @@ public class Post extends ParseObject {
 
   public void setLocation(ParseGeoPoint value) {
     put("location", value);
-  }
-
-  public static ParseQuery<Post> getQuery() {
-    return ParseQuery.getQuery(Post.class);
   }
 
   //TODO

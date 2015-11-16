@@ -35,5 +35,13 @@
     <string name="title_activity_main">EaseIn</string>
     <string name="title_activity_post">Publicar</string>
     <string name="progress_signup">Registrando datos&#8230;</string>
+    <string name="espacio_acensor">Ascensor</string>
+    <string name="espacio_banio">Baño</string>
+    <string name="espacio_parqueadero">Parqueadero</string>
+    <string name="espacio_rampa">Rampa</string>
+    <string name="espacio_acensor_desc">Ascensor con capacidad para silla de ruedas</string>
+    <string name="espacio_banio_desc">Baño para persona en condición de discapacidad</string>
+    <string name="espacio_parqueadero_desc">Parqueadero accesible y amplio</string>
+    <string name="espacio_rampa_desc">Puente o camino con acceso para silla de ruedas</string>
 
 </resources>

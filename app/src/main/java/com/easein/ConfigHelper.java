@@ -38,7 +38,7 @@ public class ConfigHelper {
   }
 
   public List<Float> getSearchDistanceAvailableOptions() {
-    final List<Float> defaultOptions = Arrays.asList(250.0f, 1000.0f, 2000.0f, 5000.0f, 20000.0f, 50000.0f);
+    final List<Float> defaultOptions = Arrays.asList(50.0f, 250.0f, 1000.0f, 2000.0f, 5000.0f, 20000.0f, 50000.0f);
 
     List<Number> options = config.getList("availableFilterDistances");
     if (options == null) {

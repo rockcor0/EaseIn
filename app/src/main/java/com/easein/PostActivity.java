@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.parse.ParseACL;
@@ -18,6 +19,8 @@ import com.parse.ParseException;
 import com.parse.ParseGeoPoint;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
+
+import java.util.ArrayList;
 
 /**
  * Activity which displays a login screen to the user, offering registration as well.
@@ -30,6 +33,7 @@ public class PostActivity extends Activity {
 
   private int maxCharacterCount = Application.getConfigHelper().getPostMaxCharacterCount();
   private ParseGeoPoint geoPoint;
+  private ListView listaEspacios;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +73,29 @@ public class PostActivity extends Activity {
 
     updatePostButtonState();
     updateCharacterCountTextViewText();
+
+    listaEspacios = (ListView) findViewById(R.id.listView);
+
+    ArrayList<EspacioAccesible> items = obtenerItems();
+
+    EspacioAccesibleAdapter adapter = new EspacioAccesibleAdapter(this, items);
+
+    listaEspacios.setAdapter(adapter);
+  }
+
+  private ArrayList<EspacioAccesible> obtenerItems() {
+    ArrayList<EspacioAccesible> items = new ArrayList<EspacioAccesible>();
+
+    items.add(new EspacioAccesible(1, getResources().getString(R.string.espacio_acensor),
+            getResources().getString(R.string.espacio_acensor_desc), "mipmap/tagmapa_ascensor"));
+    items.add(new EspacioAccesible(2, getResources().getString(R.string.espacio_banio),
+            getResources().getString(R.string.espacio_banio_desc), "mipmap/tagmapa_banos"));
+    items.add(new EspacioAccesible(3, getResources().getString(R.string.espacio_parqueadero),
+            getResources().getString(R.string.espacio_parqueadero_desc), "mipmap/tagmapa_parqueadero"));
+    items.add(new EspacioAccesible(4, getResources().getString(R.string.espacio_rampa),
+            getResources().getString(R.string.espacio_rampa_desc), "mipmap/tagmapa_rampa"));
+
+    return items;
   }
 
   private void post () {

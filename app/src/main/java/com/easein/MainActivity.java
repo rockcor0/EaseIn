@@ -250,6 +250,7 @@ public class MainActivity extends FragmentActivity implements LocationListener,
         startActivity(intent);
       }
     });
+
   }
 
   /*
@@ -463,7 +464,7 @@ public class MainActivity extends FragmentActivity implements LocationListener,
    */
   private void startPeriodicUpdates() {
     LocationServices.FusedLocationApi.requestLocationUpdates(
-        locationClient, locationRequest, this);
+            locationClient, locationRequest, this);
   }
 
   /*
@@ -546,11 +547,11 @@ public class MainActivity extends FragmentActivity implements LocationListener,
           Marker oldMarker = mapMarkers.get(post.getObjectId());
           // Set up the map marker's location
           MarkerOptions markerOpts =
-              new MarkerOptions().position(new LatLng(post.getLocation().getLatitude(), post
-                  .getLocation().getLongitude()));
+                  new MarkerOptions().position(new LatLng(post.getLocation().getLatitude(), post
+                          .getLocation().getLongitude()));
           // Set up the marker properties based on if it is within the search radius
           if (post.getLocation().distanceInKilometersTo(myPoint) > radius * METERS_PER_FEET
-              / METERS_PER_KILOMETER) {
+                  / METERS_PER_KILOMETER) {
             // Check for an existing out of range marker
             if (oldMarker != null) {
               if (oldMarker.getSnippet() == null) {
@@ -562,9 +563,33 @@ public class MainActivity extends FragmentActivity implements LocationListener,
               }
             }
             // Display a red marker with a predefined title and no snippet
-            markerOpts =
-                markerOpts.title(getResources().getString(R.string.post_out_of_range)).icon(
-                    BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED));
+            String tipoEspacio = "Rampa";
+
+            if (tipoEspacio.equals(getResources().getString(R.string.espacio_acensor))) {
+              markerOpts =
+                      markerOpts.title(getResources().getString(R.string.post_out_of_range)).icon(
+                              BitmapDescriptorFactory.fromResource(R.drawable.tagmapa_ascensor_off));
+            }
+
+            if (tipoEspacio.equals(getResources().getString(R.string.espacio_banio))) {
+              markerOpts =
+                      markerOpts.title(getResources().getString(R.string.post_out_of_range)).icon(
+                              BitmapDescriptorFactory.fromResource(R.drawable.tagmapa_banos_off));
+            }
+
+            if (tipoEspacio.equals(getResources().getString(R.string.espacio_parqueadero))) {
+              markerOpts =
+                      markerOpts.title(getResources().getString(R.string.post_out_of_range)).icon(
+                              BitmapDescriptorFactory.fromResource(R.drawable.tagmapa_parqueadero_off));
+            }
+
+            if (tipoEspacio.equals(getResources().getString(R.string.espacio_rampa))) {
+              markerOpts =
+                      markerOpts.title(getResources().getString(R.string.post_out_of_range)).icon(
+                              BitmapDescriptorFactory.fromResource(R.drawable.tagmapa_rampa_off));
+            }
+
+
           } else {
             // Check for an existing in range marker
             if (oldMarker != null) {
@@ -576,10 +601,34 @@ public class MainActivity extends FragmentActivity implements LocationListener,
                 oldMarker.remove();
               }
             }
+            //TODO Nombre del usuario en el mapa
             // Display a green marker with the post information
-            markerOpts =
-                markerOpts.title(post.getText()).snippet(post.getUser().getUsername())
-                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN));
+
+            String tipoEspacio = "Rampa";
+
+            if (tipoEspacio.equals(getResources().getString(R.string.espacio_acensor))) {
+              markerOpts =
+                      markerOpts.title(post.getText()).snippet(post.getUser().getUsername()).icon(
+                              BitmapDescriptorFactory.fromResource(R.drawable.tagmapa_ascensor));
+            }
+
+            if (tipoEspacio.equals(getResources().getString(R.string.espacio_banio))) {
+              markerOpts =
+                      markerOpts.title(post.getText()).snippet(post.getUser().getUsername()).icon(
+                              BitmapDescriptorFactory.fromResource(R.drawable.tagmapa_banos));
+            }
+
+            if (tipoEspacio.equals(getResources().getString(R.string.espacio_parqueadero))) {
+              markerOpts =
+                      markerOpts.title(post.getText()).snippet(post.getUser().getUsername()).icon(
+                              BitmapDescriptorFactory.fromResource(R.drawable.tagmapa_parqueadero));
+            }
+
+            if (tipoEspacio.equals(getResources().getString(R.string.espacio_rampa))) {
+              markerOpts =
+                      markerOpts.title(post.getText()).snippet(post.getUser().getUsername()).icon(
+                              BitmapDescriptorFactory.fromResource(R.drawable.tagmapa_rampa));
+            }
           }
           // Add a new marker
           Marker marker = mapFragment.getMap().addMarker(markerOpts);

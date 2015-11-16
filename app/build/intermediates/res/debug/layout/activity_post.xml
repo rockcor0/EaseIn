@@ -11,37 +11,50 @@
     <EditText
         android:id="@+id/post_edittext"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_above="@+id/character_count_textview"
+        android:layout_height="100dp"
         android:background="@null"
+        android:gravity="top"
         android:hint="@string/prompt_post"
         android:inputType="textMultiLine"
-        android:gravity="top" >
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
         <requestFocus />
     </EditText>
+    
+	<TextView
+        android:id="@+id/character_count_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/post_button"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:text="@string/character_count_placeholder"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/post_edittext"
+        android:choiceMode="singleChoice"
+        android:background="@drawable/lista_espacio_accesible" />
+
 
     <Button
         android:id="@+id/post_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
         android:text="@string/post" />
-    
-	<TextView
-        android:id="@+id/character_count_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:layout_above="@id/post_button"
-        android:text="@string/character_count_placeholder"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-    
+
 </RelativeLayout><!-- From: file:/D:/ProyectosAndroid/EaseIn/app/src/main/res/layout/activity_post.xml -->
