@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <items version="2" >
 
-    <item
-        jar="D:\ProyectosAndroid\EaseIn\app\build\intermediates\exploded-aar\com.android.support\design\23.0.1\jars\classes.jar"
-        jumboMode="false"
-        revision="23.0.0" sha1="e5c61a3169221a89654ffcaaed47bba51cf071ad">
+    <item jar="D:\ProyectosAndroid\EaseIn\app\libs\android-support-v4.jar"
+        jumboMode="false" revision="23.0.1" sha1="307c1cc532eabbf1d135b43e5c983c9da700449d">
         <dex
-            dex="D:\ProyectosAndroid\EaseIn\app\build\intermediates\pre-dexed\debug\classes-b60c9e2769a1b8306b1c16b9a46df7f36437b404.jar" />
+            dex="D:\ProyectosAndroid\EaseIn\app\build\intermediates\pre-dexed\debug\android-support-v4-2a6ceb78eaba9dd6a21c00317f8dcb462e19f754.jar" />
     </item>
 
 </items>

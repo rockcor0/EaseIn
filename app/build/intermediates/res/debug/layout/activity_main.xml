@@ -1,6 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/LinearLayout1"
+    android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -23,23 +23,51 @@
         android:layout_height="354dp"
         android:layout_marginTop="0dp" />
 
-    <Button
+    <com.easein.FloatingActionButton
         android:id="@+id/post_button"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        android:elevation="@dimen/fab_elevation"
+        android:background="@drawable/btn_nueva_ubicacion"
+        android:stateListAnimator="@animator/fab_anim"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/separador"
+        android:layout_alignRight="@+id/separador2"
+        android:layout_alignEnd="@+id/separador2">
+
+        <ImageView
+            android:layout_width="@dimen/fab_icon_size"
+            android:layout_height="@dimen/fab_icon_size"
+            android:src="@drawable/fab_icons"
+            android:layout_gravity="center"
+            android:duplicateParentState="true"/>
+
+    </com.easein.FloatingActionButton>
+
+    <TextView
+        android:id="@+id/separador2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/map_fragment"
-        android:text="@string/post"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
+        android:text=""
         android:textAppearance="?android:attr/textAppearanceSmallInverse" />
 
     <ListView
         android:id="@+id/posts_listview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@+id/post_button"
+        android:layout_below="@+id/separador2"
         android:layout_weight="1"
         android:paddingLeft="15dp"
-        android:paddingRight="15dp"/>
+        android:paddingRight="15dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginTop="310dp"
+        android:id="@+id/separador" />
 
 </RelativeLayout><!-- From: file:/D:/ProyectosAndroid/EaseIn/app/src/main/res/layout/activity_main.xml -->

@@ -1,0 +1,9 @@
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:enterFadeDuration="@android:integer/config_shortAnimTime">
+
+    <item>
+        <bitmap android:src="@drawable/boton_nueva_ubicacion" />
+    </item>
+
+</selector><!-- From: file:/D:/ProyectosAndroid/EaseIn/app/src/main/res/drawable/fab_icons.xml -->

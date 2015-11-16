@@ -53,8 +53,20 @@
     <color name="bright_foreground_inverse_material_light">@color/bright_foreground_material_dark</color>
     <color name="bright_foreground_material_dark">@android:color/white</color>
     <color name="bright_foreground_material_light">@android:color/black</color>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.cocosw/bottomsheet/1.2.0/res/values/values.xml -->
+    <eat-comment/>
+    <color name="bs_dark_divider_color">#1fffffff</color>
+    <color name="bs_divider_color">#1f000000</color>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <eat-comment/>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.0/res/values/values.xml -->
+    <eat-comment/>
+    <color name="cardview_dark_background">#FF202020</color>
+    <color name="cardview_light_background">#FFFAFAFA</color>
+    <color name="cardview_shadow_end_color">#03000000</color>
+    <color name="cardview_shadow_start_color">#37000000</color>
     <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/res/values/common_colors.xml -->
     <eat-comment/>
     <color name="common_action_bar_splitter">#d2d2d2</color>
@@ -152,6 +164,8 @@
     <declare-styleable name="AppBarLayout"><attr name="elevation"/><attr name="android:background"/><attr format="boolean" name="expanded"/></declare-styleable>
     <declare-styleable name="AppBarLayout_LayoutParams"><attr name="layout_scrollFlags"><flag name="scroll" value="0x1"/><flag name="exitUntilCollapsed" value="0x2"/><flag name="enterAlways" value="0x4"/><flag name="enterAlwaysCollapsed" value="0x8"/></attr><attr format="reference" name="layout_scrollInterpolator"/></declare-styleable>
     <declare-styleable name="AppCompatTextView"><attr format="reference|boolean" name="textAllCaps"/><attr name="android:textAppearance"/></declare-styleable>
+    <declare-styleable name="BottomSheet"><attr format="reference" name="bottomSheetStyle"/><attr format="color|reference" name="bs_dialogBackground"/><attr format="reference" name="bs_listStyle"/><attr format="color|reference" name="bs_dividerColor"/><attr format="integer" name="bs_numColumns"/><attr format="reference" name="bs_titleTextAppearance"/><attr format="reference" name="bs_listItemTitleTextAppearance"/><attr format="reference" name="bs_gridItemTitleTextAppearance"/><attr format="reference" name="bs_moreDrawable"/><attr format="string" name="bs_moreText"/><attr format="reference" name="bs_closeDrawable"/><attr format="boolean" name="bs_collapseListIcons"/><attr format="reference" name="bs_listItemLayout"/><attr format="reference" name="bs_gridItemLayout"/><attr format="reference" name="bs_headerLayout"/></declare-styleable>
+    <declare-styleable name="CardView"><attr format="color" name="cardBackgroundColor"/><attr format="dimension" name="cardCornerRadius"/><attr format="dimension" name="cardElevation"/><attr format="dimension" name="cardMaxElevation"/><attr format="boolean" name="cardUseCompatPadding"/><attr format="boolean" name="cardPreventCornerOverlap"/><attr format="dimension" name="contentPadding"/><attr format="dimension" name="contentPaddingLeft"/><attr format="dimension" name="contentPaddingRight"/><attr format="dimension" name="contentPaddingTop"/><attr format="dimension" name="contentPaddingBottom"/></declare-styleable>
     <declare-styleable name="CollapsingAppBarLayout_LayoutParams"><attr name="layout_collapseMode"><enum name="none" value="0"/><enum name="pin" value="1"/><enum name="parallax" value="2"/></attr><attr format="float" name="layout_collapseParallaxMultiplier"/></declare-styleable>
     <declare-styleable name="CollapsingToolbarLayout"><attr format="dimension" name="expandedTitleMargin"/><attr format="dimension" name="expandedTitleMarginStart"/><attr format="dimension" name="expandedTitleMarginTop"/><attr format="dimension" name="expandedTitleMarginEnd"/><attr format="dimension" name="expandedTitleMarginBottom"/><attr format="reference" name="expandedTitleTextAppearance"/><attr format="reference" name="collapsedTitleTextAppearance"/><attr format="color" name="contentScrim"/><attr format="color" name="statusBarScrim"/><attr format="reference" name="toolbarId"/><attr name="collapsedTitleGravity"><flag name="top" value="0x30"/><flag name="bottom" value="0x50"/><flag name="left" value="0x03"/><flag name="right" value="0x05"/><flag name="center_vertical" value="0x10"/><flag name="fill_vertical" value="0x70"/><flag name="center_horizontal" value="0x01"/><flag name="center" value="0x11"/><flag name="start" value="0x00800003"/><flag name="end" value="0x00800005"/></attr><attr name="expandedTitleGravity"><flag name="top" value="0x30"/><flag name="bottom" value="0x50"/><flag name="left" value="0x03"/><flag name="right" value="0x05"/><flag name="center_vertical" value="0x10"/><flag name="fill_vertical" value="0x70"/><flag name="center_horizontal" value="0x01"/><flag name="center" value="0x11"/><flag name="start" value="0x00800003"/><flag name="end" value="0x00800005"/></attr><attr format="boolean" name="titleEnabled"/><attr name="title"/></declare-styleable>
     <declare-styleable name="CompoundButton"><attr name="android:button"/><attr format="color" name="buttonTint"/><attr name="buttonTintMode"><enum name="src_over" value="3"/><enum name="src_in" value="5"/><enum name="src_atop" value="9"/><enum name="multiply" value="14"/><enum name="screen" value="15"/></attr></declare-styleable>
@@ -254,6 +268,17 @@
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.cocosw/bottomsheet/1.2.0/res/values/values.xml -->
+    <eat-comment/>
+    <dimen name="bs_grid_bottom_padding">8dp</dimen>
+    <dimen name="bs_grid_left_padding">8dp</dimen>
+    <dimen name="bs_grid_right_padding">8dp</dimen>
+    <dimen name="bs_grid_top_padding">0dp</dimen>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.0/res/values/values.xml -->
+    <eat-comment/>
+    <dimen name="cardview_compat_inset_shadow">1dp</dimen>
+    <dimen name="cardview_default_elevation">2dp</dimen>
+    <dimen name="cardview_default_radius">2dp</dimen>
     <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <dimen name="design_appbar_elevation">4dp</dimen>
@@ -290,6 +315,15 @@
     <item name="dialog_fixed_width_minor" type="dimen">320dp</item>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="fab_elevation">8dp</dimen>
+    <dimen name="fab_icon_size">40dp</dimen>
+    <dimen name="fab_press_translation_z">9dp</dimen>
+    <dimen name="fab_size">56dp</dimen>
+    <dimen name="fab_size_small">40dp</dimen>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <eat-comment/>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
     <item format="float" name="highlight_alpha_material_light" type="dimen">0.12</item>
@@ -306,6 +340,13 @@
     <item name="action_bar_spinner" type="id"/>
     <item name="action_menu_divider" type="id"/>
     <item name="action_menu_presenter" type="id"/>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.cocosw/bottomsheet/1.2.0/res/values/values.xml -->
+    <eat-comment/>
+    <item name="bottom_sheet_title" type="id"/>
+    <item name="bottom_sheet_title_image" type="id"/>
+    <item name="bs_list_image" type="id"/>
+    <item name="bs_list_title" type="id"/>
+    <item name="bs_more" type="id"/>
     <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.5.0/res/values/cast_ids.xml -->
     <eat-comment/>
     <item name="cast_notification_id" type="id"/>
@@ -324,6 +365,13 @@
     <integer name="abc_config_activityDefaultDur">220</integer>
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="abc_max_action_buttons">2</integer>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.cocosw/bottomsheet/1.2.0/res/values/values.xml -->
+    <eat-comment/>
+    <integer name="bs_grid_colum">3</integer>
+    <integer name="bs_initial_grid_row">3</integer>
+    <integer name="bs_initial_list_row">5</integer>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <eat-comment/>
     <integer name="cancel_button_image_alpha">127</integer>
     <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/res/values/values.xml -->
     <eat-comment/>
@@ -331,6 +379,9 @@
     <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/7.5.0/res/values/version.xml -->
     <eat-comment/>
     <integer name="google_play_services_version">7571000</integer>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.cocosw/bottomsheet/1.2.0/res/values/values.xml -->
+    <eat-comment/>
+    <integer name="no_limit">0</integer>
     <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <integer name="status_bar_notification_info_maxnum">999</integer>
@@ -366,6 +417,9 @@
     <eat-comment/>
     <string name="auth_google_play_services_client_facebook_display_name">Facebook</string>
     <string name="auth_google_play_services_client_google_display_name">Google</string>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.cocosw/bottomsheet/1.2.0/res/values/values.xml -->
+    <eat-comment/>
+    <string name="bs_more">More</string>
     <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/7.5.0/res/values/cast_strings.xml -->
     <eat-comment/>
     <string name="cast_notification_connected_message">Connected to <ns1:g id="name">%1$s</ns1:g></string>
@@ -419,7 +473,7 @@
     <string name="error_blank_username">escriba un usuario</string>
     <string name="error_end">.</string>
     <string name="error_intro">"Por favor "</string>
-    <string name="error_join">", y "</string>
+    <string name="error_join">" y "</string>
     <string name="error_mismatched_passwords">escriba la misma contraseña de nuevo</string>
     <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/src/debug/res/values/google_maps_api.xml -->
     <eat-comment/>
@@ -445,8 +499,8 @@
     <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="parse">Parse</string>
-    <string name="post">Marcar punto</string>
-    <string name="post_out_of_range">No se puede ver los espacios. Reiniciar</string>
+    <string name="post">Nuevo punto</string>
+    <string name="post_out_of_range">Muy Lejos (Cambia distancia en Menú "Opciones")</string>
     <string name="powered_by">Powered by</string>
     <string name="progress_login">Iniciando sesión…</string>
     <string name="progress_post">Publicando…</string>
@@ -455,7 +509,7 @@
     <string name="prompt_password_again">Repetir contraseña</string>
     <string name="prompt_post">Marcar punto</string>
     <string name="prompt_username">Usuario</string>
-    <string name="search_distance">Distancia de búsqueda</string>
+    <string name="search_distance">Radio de búsqueda de puntos accesibles</string>
     <string name="settings_distance_format">%d pies</string>
     <string name="signup">Registrarse</string>
     <string name="slogan">True friendship everywhere you go!</string>
@@ -1423,6 +1477,146 @@
         <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
         <item name="tabSelectedTextColor">?android:textColorPrimary</item>
     </style>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.cocosw/bottomsheet/1.2.0/res/values/values.xml -->
+    <eat-comment/>
+    <style name="BottomSheet"/>
+    <style name="BottomSheet.Animation">
+        <item name="android:windowEnterAnimation">@anim/dock_bottom_enter</item>
+        <item name="android:windowExitAnimation">@anim/dock_bottom_exit</item>
+    </style>
+    <style name="BottomSheet.Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:textColor">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:backgroundDimAmount">0.3</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowAnimationStyle">@style/BottomSheet.Animation</item>
+        <item name="android:textColorPrimary">#DD000000</item>
+        <item name="android:textColorSecondary">#8A000000</item>
+        <item name="android:textColorHint">#42000000</item>
+        <item name="bs_dialogBackground">@android:color/background_light</item>
+        <item name="bs_dividerColor">@color/bs_divider_color</item>
+        <item name="bs_numColumns">@integer/bs_grid_colum</item>
+        <item name="bs_titleTextAppearance">@style/Text.Headline</item>
+        <item name="bs_listItemTitleTextAppearance">@style/Text.Title</item>
+        <item name="bs_gridItemTitleTextAppearance">@style/Text.Hint</item>
+        <item name="bs_moreText">@string/bs_more</item>
+        <item name="bs_closeDrawable">@drawable/bs_ic_clear_light</item>
+        <item name="bs_moreDrawable">@drawable/bs_ic_more_light</item>
+        <item name="bs_listStyle">@style/BottomSheet.List</item>
+        <item name="bs_collapseListIcons">true</item>
+        <item name="bs_listItemLayout">@layout/bs_list_entry</item>
+        <item name="bs_gridItemLayout">@layout/bs_grid_entry</item>
+        <item name="bs_headerLayout">@layout/bs_header</item>
+    </style>
+    <style name="BottomSheet.Dialog.Dark" parent="BottomSheet.Dialog">
+        <item name="android:textColorPrimary">#DDffffff</item>
+        <item name="android:textColorSecondary">#8Affffff</item>
+        <item name="android:textColorHint">#42ffffff</item>
+        <item name="bs_dialogBackground">@android:color/background_dark</item>
+        <item name="bs_dividerColor">@color/bs_dark_divider_color</item>
+        <item name="bs_listStyle">@style/BottomSheet.List.Dark</item>
+        <item name="bs_closeDrawable">@drawable/bs_ic_clear</item>
+        <item name="bs_moreDrawable">@drawable/bs_ic_more</item>
+    </style>
+    <style name="BottomSheet.Grid"/>
+    <style name="BottomSheet.GridItem">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+    <style name="BottomSheet.GridItemImage">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:padding">0dp</item>
+    </style>
+    <style name="BottomSheet.GridItemTitle">
+        <item name="android:singleLine">true</item>
+        <item name="android:textAppearance">?bs_gridItemTitleTextAppearance</item>
+        <item name="android:padding">0dp</item>
+    </style>
+    <style name="BottomSheet.Icon">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+    </style>
+    <style name="BottomSheet.List">
+        <item name="android:listSelector">@drawable/bs_list_selector</item>
+        <item name="android:drawSelectorOnTop">false</item>
+        <item name="android:layoutAnimation">@anim/bs_list_layout_anim_in</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:clipToPadding">false</item>
+    </style>
+    <style name="BottomSheet.List.Dark">
+        <item name="android:listSelector">@drawable/bs_list_dark_selector</item>
+    </style>
+    <style name="BottomSheet.ListDivider">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:minHeight">1dp</item>
+        <item name="android:background">?bs_dividerColor</item>
+        <item name="android:layout_marginTop">7dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+    <style name="BottomSheet.ListItem">
+        <item name="android:layoutDirection" ns1:ignore="NewApi">locale</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layoutAnimation">@null</item>
+    </style>
+    <style name="BottomSheet.ListItemImage">
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+    <style name="BottomSheet.ListItemTitle">
+        <item name="android:textAlignment" ns1:targetApi="jelly_bean_mr1">viewStart</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:textAppearance">?bs_listItemTitleTextAppearance</item>
+    </style>
+    <style name="BottomSheet.Title">
+        <item name="android:textAlignment" ns1:ignore="NewApi">viewStart</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">?bs_titleTextAppearance</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+    <style name="BottomSheet.TopDivider">
+        <item name="android:background">?bs_dividerColor</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.0/res/values/values.xml -->
+    <eat-comment/>
+    <style name="CardView">
+        <item name="cardBackgroundColor">@color/cardview_light_background</item>
+        <item name="cardCornerRadius">@dimen/cardview_default_radius</item>
+        <item name="cardElevation">@dimen/cardview_default_elevation</item>
+        <item name="cardMaxElevation">@dimen/cardview_default_elevation</item>
+        <item name="cardUseCompatPadding">false</item>
+        <item name="cardPreventCornerOverlap">true</item>
+    </style>
+    <style name="CardView.Dark">
+        <item name="cardBackgroundColor">@color/cardview_dark_background</item>
+    </style>
+    <style name="CardView.Light">
+        <item name="cardBackgroundColor">@color/cardview_light_background</item>
+    </style>
     <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="LoginFormContainer">
@@ -1572,6 +1766,35 @@
     <style name="RtlOverlay.Widget.AppCompat.SearchView.MagIcon" parent="android:Widget">
         <item name="android:layout_marginLeft">@dimen/abc_dropdownitem_text_padding_left</item>
     </style>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.cocosw/bottomsheet/1.2.0/res/values/values.xml -->
+    <eat-comment/>
+    <style name="Text"/>
+    <style name="Text.Headline">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily" ns1:ignore="NewApi">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+    <style name="Text.Hint">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">?android:textColorHint</item>
+        <item name="android:fontFamily" ns1:ignore="NewApi">sans-serif-medium</item>
+    </style>
+    <style name="Text.Subhead">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:fontFamily" ns1:ignore="NewApi">sans-serif</item>
+    </style>
+    <style name="Text.Title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:fontFamily" ns1:ignore="NewApi">sans-serif-medium</item>
+    </style>
+    <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
+    <eat-comment/>
     <style name="TextAppearance.AppCompat" parent="Base.TextAppearance.AppCompat"/>
     <style name="TextAppearance.AppCompat.Body1" parent="Base.TextAppearance.AppCompat.Body1"/>
     <style name="TextAppearance.AppCompat.Body2" parent="Base.TextAppearance.AppCompat.Body2"/>

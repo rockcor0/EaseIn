@@ -18,7 +18,6 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -99,10 +98,10 @@ public class MainActivity extends FragmentActivity implements LocationListener,
   private static final float OFFSET_CALCULATION_ACCURACY = 0.01f;
 
   // Maximum results returned from a Parse query
-  private static final int MAX_POST_SEARCH_RESULTS = 20;
+  private static final int MAX_POST_SEARCH_RESULTS = 200;
 
   // Maximum post search radius for map in kilometers
-  private static final int MAX_POST_SEARCH_DISTANCE = 100;
+  private static final int MAX_POST_SEARCH_DISTANCE = 50000; //100
   // Fields for helping process map and location changes
   private final Map<String, Marker> mapMarkers = new HashMap<String, Marker>();
   /*
@@ -234,7 +233,8 @@ public class MainActivity extends FragmentActivity implements LocationListener,
     });
 
     // Set up the handler for the post button click
-    Button postButton = (Button) findViewById(R.id.post_button);
+    //Button postButton = (Button) findViewById(R.id.post_button);
+    FloatingActionButton postButton = (FloatingActionButton) findViewById(R.id.post_button);
     postButton.setOnClickListener(new OnClickListener() {
       public void onClick(View v) {
         // Only allow posts if we have a location
@@ -786,5 +786,5 @@ public class MainActivity extends FragmentActivity implements LocationListener,
       return mDialog;
     }
   }
-//TODO
+
 }

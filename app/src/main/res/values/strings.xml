@@ -9,11 +9,11 @@
     <string name="parse">Parse</string>
     <string name="slogan">True friendship everywhere you go!</string>
     <string name="title_activity_settings">Opciones</string>
-    <string name="search_distance">Distancia de búsqueda</string>
+    <string name="search_distance">Radio de búsqueda de puntos accesibles</string>
     <string name="logout_full">Salir de EaseIn</string>
-    <string name="post">Marcar punto</string>
+    <string name="post">Nuevo punto</string>
     <string name="prompt_post">Marcar punto</string>
-    <string name="post_out_of_range">No se puede ver los espacios. Reiniciar</string>
+    <string name="post_out_of_range">Muy Lejos (Cambia distancia en Menú "Opciones")</string>
     <string name="progress_post">Publicando&#8230;</string>
     <string name="settings_distance_format">%d pies</string>
     <string name="activity_post_title">Publicar un espacio accesible</string>
@@ -27,7 +27,7 @@
     <string name="error_blank_username">escriba un usuario</string>
     <string name="error_blank_password">escriba una contraseña</string>
     <string name="error_mismatched_passwords">escriba la misma contraseña de nuevo</string>
-    <string name="error_join">", y "</string>
+    <string name="error_join">" y "</string>
     <string name="error_end">.</string>
     <string name="progress_login">Iniciando sesión&#8230;</string>
     <string name="title_activity_maps">Mapa</string>

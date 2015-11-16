@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true">
+        <ripple android:color="@color/azul_oscuro">
+            <item>
+                <shape>
+                    <solid android:color="@color/azul_oscuro" />
+                </shape>
+            </item>
+        </ripple>
+    </item>
+
+    <item android:state_pressed="false">
+        <ripple android:color="@color/azul_claro">
+            <item>
+                <shape>
+                    <solid android:color="@color/azul_claro" />
+                </shape>
+            </item>
+        </ripple>
+    </item>
+
+</selector><!-- From: file:/D:/ProyectosAndroid/EaseIn/app/src/main/res/drawable/btn_nueva_ubicacion.xml -->

@@ -19,13 +19,25 @@ public class Application extends android.app.Application {
   // Key for saving the search distance preference
   private static final String KEY_SEARCH_DISTANCE = "searchDistance";
 
-  private static final float DEFAULT_SEARCH_DISTANCE = 250.0f;
+  private static final float DEFAULT_SEARCH_DISTANCE = 25000.0f; //250
 
   private static SharedPreferences preferences;
 
   private static ConfigHelper configHelper;
 
   public Application() {
+  }
+
+  public static float getSearchDistance() {
+    return preferences.getFloat(KEY_SEARCH_DISTANCE, DEFAULT_SEARCH_DISTANCE);
+  }
+
+  public static void setSearchDistance(float value) {
+    preferences.edit().putFloat(KEY_SEARCH_DISTANCE, value).commit();
+  }
+
+  public static ConfigHelper getConfigHelper() {
+    return configHelper;
   }
 
   @Override
@@ -43,18 +55,6 @@ public class Application extends android.app.Application {
 
     configHelper = new ConfigHelper();
     configHelper.fetchConfigIfNeeded();
-  }
-
-  public static float getSearchDistance() {
-    return preferences.getFloat(KEY_SEARCH_DISTANCE, DEFAULT_SEARCH_DISTANCE);
-  }
-
-  public static ConfigHelper getConfigHelper() {
-    return configHelper;
-  }
-
-  public static void setSearchDistance(float value) {
-    preferences.edit().putFloat(KEY_SEARCH_DISTANCE, value).commit();
   }
 //TODO
 }

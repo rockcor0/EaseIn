@@ -1,6 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/LinearLayout1"
+    android:id="@+id/RelativeLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -23,23 +23,51 @@
         android:layout_height="354dp"
         android:layout_marginTop="0dp" />
 
-    <Button
+    <com.easein.FloatingActionButton
         android:id="@+id/post_button"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
+        android:layout_alignEnd="@+id/separador2"
+        android:layout_alignRight="@+id/separador2"
+        android:layout_below="@+id/separador"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btn_nueva_ubicacion"
+        android:elevation="@dimen/fab_elevation"
+        android:stateListAnimator="@animator/fab_anim">
+
+        <ImageView
+            android:layout_width="@dimen/fab_icon_size"
+            android:layout_height="@dimen/fab_icon_size"
+            android:layout_gravity="center"
+            android:duplicateParentState="true"
+            android:src="@drawable/fab_icons" />
+
+    </com.easein.FloatingActionButton>
+
+    <TextView
+        android:id="@+id/separador2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/map_fragment"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:text="@string/post"
+        android:text=""
         android:textAppearance="?android:attr/textAppearanceSmallInverse" />
 
     <ListView
         android:id="@+id/posts_listview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@+id/post_button"
+        android:layout_below="@+id/separador2"
         android:layout_weight="1"
         android:paddingLeft="15dp"
         android:paddingRight="15dp" />
+
+    <TextView
+        android:id="@+id/separador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="310dp"
+        android:text="" />
 
 </RelativeLayout>
