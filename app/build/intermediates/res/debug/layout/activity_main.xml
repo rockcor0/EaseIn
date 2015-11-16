@@ -27,20 +27,20 @@
         android:id="@+id/post_button"
         android:layout_width="@dimen/fab_size"
         android:layout_height="@dimen/fab_size"
-        android:elevation="@dimen/fab_elevation"
-        android:background="@drawable/btn_nueva_ubicacion"
-        android:stateListAnimator="@animator/fab_anim"
-        android:layout_gravity="center_horizontal"
-        android:layout_below="@+id/separador"
+        android:layout_alignEnd="@+id/separador2"
         android:layout_alignRight="@+id/separador2"
-        android:layout_alignEnd="@+id/separador2">
+        android:layout_below="@+id/separador"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btn_nueva_ubicacion"
+        android:elevation="@dimen/fab_elevation"
+        android:stateListAnimator="@animator/fab_anim">
 
         <ImageView
             android:layout_width="@dimen/fab_icon_size"
             android:layout_height="@dimen/fab_icon_size"
-            android:src="@drawable/fab_icons"
             android:layout_gravity="center"
-            android:duplicateParentState="true"/>
+            android:duplicateParentState="true"
+            android:src="@drawable/fab_icons" />
 
     </com.easein.FloatingActionButton>
 
@@ -64,10 +64,10 @@
         android:paddingRight="15dp" />
 
     <TextView
+        android:id="@+id/separador"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
         android:layout_marginTop="310dp"
-        android:id="@+id/separador" />
+        android:text="" />
 
 </RelativeLayout><!-- From: file:/D:/ProyectosAndroid/EaseIn/app/src/main/res/layout/activity_main.xml -->

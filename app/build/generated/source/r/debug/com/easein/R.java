@@ -2943,8 +2943,8 @@ containing a value of this type.
         public static final int searchdistance_radiogroup=0x7f0e008f;
         public static final int select_dialog_listview=0x7f0e007f;
         public static final int selectionDetails=0x7f0e004b;
-        public static final int separador=0x7f0e0088;
-        public static final int separador2=0x7f0e0089;
+        public static final int separador=0x7f0e0089;
+        public static final int separador2=0x7f0e0088;
         public static final int settings=0x7f0e00a2;
         public static final int shortcut=0x7f0e006a;
         public static final int showCustom=0x7f0e0016;

@@ -880,8 +880,8 @@ int id search_voice_btn 0x7f0e007e
 int id searchdistance_radiogroup 0x7f0e008f
 int id select_dialog_listview 0x7f0e007f
 int id selectionDetails 0x7f0e004b
-int id separador 0x7f0e0088
-int id separador2 0x7f0e0089
+int id separador 0x7f0e0089
+int id separador2 0x7f0e0088
 int id settings 0x7f0e00a2
 int id shortcut 0x7f0e006a
 int id showCustom 0x7f0e0016
