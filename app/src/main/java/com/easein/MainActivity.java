@@ -45,6 +45,7 @@ import com.parse.ParseException;
 import com.parse.ParseGeoPoint;
 import com.parse.ParseQuery;
 import com.parse.ParseQueryAdapter;
+import com.parse.ParseUser;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -554,9 +555,10 @@ public class MainActivity extends FragmentActivity implements LocationListener,
                   / METERS_PER_KILOMETER) {
             // Check for an existing out of range marker
             if (oldMarker != null) {
-              if (oldMarker.getSnippet() == null) {
+                if (oldMarker.getSnippet() == null) {
                 // Out of range marker already exists, skip adding it
                 continue;
+
               } else {
                 // Marker now out of range, needs to be refreshed
                 oldMarker.remove();
@@ -567,29 +569,25 @@ public class MainActivity extends FragmentActivity implements LocationListener,
 
             if (tipoEspacio.equals(getResources().getString(R.string.espacio_acensor))) {
               markerOpts =
-                      markerOpts.title(getResources().getString(R.string.post_out_of_range_tit))
-                              .snippet(getString(R.string.post_out_of_range_sub)).icon(
+                      markerOpts.title(getResources().getString(R.string.post_out_of_range_tit)).icon(
                               BitmapDescriptorFactory.fromResource(R.drawable.tagmapa_ascensor_off));
             }
 
             if (tipoEspacio.equals(getResources().getString(R.string.espacio_banio))) {
               markerOpts =
-                      markerOpts.title(getResources().getString(R.string.post_out_of_range_tit))
-                              .snippet(getString(R.string.post_out_of_range_sub)).icon(
+                      markerOpts.title(getResources().getString(R.string.post_out_of_range_tit)).icon(
                               BitmapDescriptorFactory.fromResource(R.drawable.tagmapa_banos_off));
             }
 
             if (tipoEspacio.equals(getResources().getString(R.string.espacio_parqueadero))) {
               markerOpts =
-                      markerOpts.title(getResources().getString(R.string.post_out_of_range_tit))
-                              .snippet(getString(R.string.post_out_of_range_sub)).icon(
+                      markerOpts.title(getResources().getString(R.string.post_out_of_range_tit)).icon(
                               BitmapDescriptorFactory.fromResource(R.drawable.tagmapa_parqueadero_off));
             }
 
             if (tipoEspacio.equals(getResources().getString(R.string.espacio_rampa))) {
               markerOpts =
-                      markerOpts.title(getResources().getString(R.string.post_out_of_range_tit))
-                              .snippet(getString(R.string.post_out_of_range_sub)).icon(
+                      markerOpts.title(getResources().getString(R.string.post_out_of_range_tit)).icon(
                               BitmapDescriptorFactory.fromResource(R.drawable.tagmapa_rampa_off));
             }
 
@@ -776,11 +774,23 @@ public class MainActivity extends FragmentActivity implements LocationListener,
     getMenuInflater().inflate(R.menu.main, menu);
 
     menu.findItem(R.id.action_settings).setOnMenuItemClickListener(new OnMenuItemClickListener() {
-      public boolean onMenuItemClick(MenuItem item) {
-        startActivity(new Intent(MainActivity.this, SettingsActivity.class));
-        return true;
-      }
+        public boolean onMenuItemClick(MenuItem item) {
+            startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+            return true;
+        }
     });
+
+      menu.findItem(R.id.action_cerrar_sesion).setOnMenuItemClickListener(new OnMenuItemClickListener() {
+          public boolean onMenuItemClick(MenuItem item) {
+              //TODO
+              ParseUser.logOut();
+              // Start and intent for the dispatch activity
+              Intent intent = new Intent(MainActivity.this, DispatchActivity.class);
+              intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+              startActivity(intent);
+              return true;
+          }
+      });
     return true;
   }
 

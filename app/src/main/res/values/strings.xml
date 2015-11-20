@@ -3,17 +3,20 @@
 
     <string name="app_name">EaseIn</string>
     <string name="action_settings">Opciones</string>
+    <string name="cerrar_sesion">Cerrar sesion</string>
+    <string name="mis_datos">Mis datos</string>
+    <string name="aceptar">Aceptar</string>
     <string name="login">Iniciar sesión</string>
     <string name="signup">Registrarse</string>
     <string name="powered_by">Powered by</string>
     <string name="parse">Parse</string>
     <string name="slogan">True friendship everywhere you go!</string>
     <string name="title_activity_settings">Opciones</string>
-    <string name="search_distance">Radio de búsqueda de puntos accesibles</string>
+    <string name="search_distance">Selecciona el radio máximo de búsqueda de Espacios Accesibles</string>
     <string name="logout_full">Salir de EaseIn</string>
     <string name="post">Nuevo punto</string>
     <string name="prompt_post">Marcar punto</string>
-    <string name="post_out_of_range_tit">Muy lejos</string>
+    <string name="post_out_of_range_tit">Muy lejos (Cambia la distancia en Menú "Opciones")</string>
     <string name="post_out_of_range_sub">Cambia el radio de búsqueda en Menú "Opciones"</string>
     <string name="progress_post">Publicando&#8230;</string>
     <string name="settings_distance_format">%d pies</string>
@@ -44,5 +47,8 @@
     <string name="espacio_banio_desc">Baño para persona en condición de discapacidad</string>
     <string name="espacio_parqueadero_desc">Parqueadero accesible y amplio</string>
     <string name="espacio_rampa_desc">Puente o camino con acceso para silla de ruedas</string>
+    <string name="titulo_info">Un nuevo Espacio Accesible será agregado al mapa de EaseIn en el lugar donde te encuentras ahora mismo</string>
+    <string name="titulo_info_add">Selecciona el tipo de Espacio Accesible</string>
+    <string name="cancelar">Cancelar</string>
 
 </resources>

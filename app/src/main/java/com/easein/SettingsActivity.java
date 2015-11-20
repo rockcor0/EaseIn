@@ -69,6 +69,14 @@ public class SettingsActivity extends Activity {
         startActivity(intent);
       }
     });
+
+    Button btnVolver = (Button) findViewById(R.id.volver_button);
+    btnVolver.setOnClickListener(new OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        finish();
+      }
+    });
   }
 
   //TODO

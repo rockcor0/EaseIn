@@ -6,4 +6,9 @@
         android:showAsAction="never"
         android:title="@string/action_settings"/>
 
+    <item
+        android:id="@+id/action_cerrar_sesion"
+        android:orderInCategory="100"
+        android:title="@string/cerrar_sesion" />
+
 </menu><!-- From: file:/D:/ProyectosAndroid/EaseIn/app/src/main/res/menu/main.xml -->

@@ -31,6 +31,7 @@ public class PostActivity extends Activity {
   private EditText postEditText;
   private TextView characterCountTextView;
   private Button postButton;
+  private Button cancelarButton;
 
   private int maxCharacterCount = Application.getConfigHelper().getPostMaxCharacterCount();
   private ParseGeoPoint geoPoint;
@@ -66,10 +67,17 @@ public class PostActivity extends Activity {
 
     characterCountTextView = (TextView) findViewById(R.id.character_count_textview);
 
+    cancelarButton = (Button) findViewById(R.id.btn_cancelar);
     postButton = (Button) findViewById(R.id.post_button);
     postButton.setOnClickListener(new OnClickListener() {
       public void onClick(View v) {
         post();
+      }
+    });
+
+    cancelarButton.setOnClickListener(new OnClickListener() {
+      public void onClick(View v) {
+        btnCancelar();
       }
     });
 
@@ -127,6 +135,10 @@ public class PostActivity extends Activity {
             getResources().getString(R.string.espacio_rampa_desc), "mipmap/tagmapa_rampa"));
 
     return items;
+  }
+
+  private void btnCancelar() {
+    finish();
   }
 
   private void post () {

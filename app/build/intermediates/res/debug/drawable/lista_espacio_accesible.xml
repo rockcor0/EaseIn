@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@color/azul_muy_claro" android:state_checked="false"></item>
+    <item android:drawable="@color/azul_oscuro" android:state_checked="true"></item>
+
+</selector><!-- From: file:/D:/ProyectosAndroid/EaseIn/app/src/main/res/drawable/lista_espacio_accesible.xml -->
