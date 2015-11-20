@@ -217,6 +217,7 @@ public class MainActivity extends FragmentActivity implements LocationListener,
         Marker marker = mapMarkers.get(item.getObjectId());
         if (marker != null) {
           marker.showInfoWindow();
+
         }
       }
     });
@@ -230,6 +231,7 @@ public class MainActivity extends FragmentActivity implements LocationListener,
       public void onCameraChange(CameraPosition position) {
         // When the camera changes, update the query
         doMapQuery();
+
       }
     });
 
@@ -510,7 +512,8 @@ public class MainActivity extends FragmentActivity implements LocationListener,
     // If location info isn't available, clean up any existing markers
     if (myLoc == null) {
       cleanUpMarkers(new HashSet<String>());
-      return;
+
+        return;
     }
     final ParseGeoPoint myPoint = geoPointFromLocation(myLoc);
     // Create the map Parse query
@@ -664,7 +667,8 @@ public class MainActivity extends FragmentActivity implements LocationListener,
    * Helper method to get the Parse GEO point representation of a location
    */
   private ParseGeoPoint geoPointFromLocation(Location loc) {
-    return new ParseGeoPoint(loc.getLatitude(), loc.getLongitude());
+
+      return new ParseGeoPoint(loc.getLatitude(), loc.getLongitude());
   }
 
   /*
@@ -675,7 +679,7 @@ public class MainActivity extends FragmentActivity implements LocationListener,
       mapCircle =
           mapFragment.getMap().addCircle(
               new CircleOptions().center(myLatLng).radius(radius * METERS_PER_FEET));
-      int baseColor = Color.DKGRAY;
+        int baseColor = Color.argb(100, 53, 136, 200);
       mapCircle.setStrokeColor(baseColor);
       mapCircle.setStrokeWidth(2);
       mapCircle.setFillColor(Color.argb(50, Color.red(baseColor), Color.green(baseColor),
@@ -839,6 +843,7 @@ public class MainActivity extends FragmentActivity implements LocationListener,
      */
     public void setDialog(Dialog dialog) {
       mDialog = dialog;
+        //TODO
     }
 
     /*
