@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:ns1="http://schemas.android.com/tools">
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
     <!-- From: file:/D:/ProyectosAndroid/EaseIn/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
@@ -508,7 +508,8 @@
     <eat-comment/>
     <string name="parse">Parse</string>
     <string name="post">Nuevo punto</string>
-    <string name="post_out_of_range">Muy Lejos (Cambia distancia en Menú "Opciones")</string>
+    <string name="post_out_of_range_sub">Cambia el radio de búsqueda en Menú "Opciones"</string>
+    <string name="post_out_of_range_tit">Muy lejos</string>
     <string name="powered_by">Powered by</string>
     <string name="progress_login">Iniciando sesión…</string>
     <string name="progress_post">Publicando…</string>

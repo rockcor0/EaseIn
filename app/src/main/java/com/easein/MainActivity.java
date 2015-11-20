@@ -563,29 +563,33 @@ public class MainActivity extends FragmentActivity implements LocationListener,
               }
             }
             // Display a red marker with a predefined title and no snippet
-            String tipoEspacio = "Rampa";
+            String tipoEspacio = post.getTipoEspacio();
 
             if (tipoEspacio.equals(getResources().getString(R.string.espacio_acensor))) {
               markerOpts =
-                      markerOpts.title(getResources().getString(R.string.post_out_of_range)).icon(
+                      markerOpts.title(getResources().getString(R.string.post_out_of_range_tit))
+                              .snippet(getString(R.string.post_out_of_range_sub)).icon(
                               BitmapDescriptorFactory.fromResource(R.drawable.tagmapa_ascensor_off));
             }
 
             if (tipoEspacio.equals(getResources().getString(R.string.espacio_banio))) {
               markerOpts =
-                      markerOpts.title(getResources().getString(R.string.post_out_of_range)).icon(
+                      markerOpts.title(getResources().getString(R.string.post_out_of_range_tit))
+                              .snippet(getString(R.string.post_out_of_range_sub)).icon(
                               BitmapDescriptorFactory.fromResource(R.drawable.tagmapa_banos_off));
             }
 
             if (tipoEspacio.equals(getResources().getString(R.string.espacio_parqueadero))) {
               markerOpts =
-                      markerOpts.title(getResources().getString(R.string.post_out_of_range)).icon(
+                      markerOpts.title(getResources().getString(R.string.post_out_of_range_tit))
+                              .snippet(getString(R.string.post_out_of_range_sub)).icon(
                               BitmapDescriptorFactory.fromResource(R.drawable.tagmapa_parqueadero_off));
             }
 
             if (tipoEspacio.equals(getResources().getString(R.string.espacio_rampa))) {
               markerOpts =
-                      markerOpts.title(getResources().getString(R.string.post_out_of_range)).icon(
+                      markerOpts.title(getResources().getString(R.string.post_out_of_range_tit))
+                              .snippet(getString(R.string.post_out_of_range_sub)).icon(
                               BitmapDescriptorFactory.fromResource(R.drawable.tagmapa_rampa_off));
             }
 
@@ -604,7 +608,7 @@ public class MainActivity extends FragmentActivity implements LocationListener,
             //TODO Nombre del usuario en el mapa
             // Display a green marker with the post information
 
-            String tipoEspacio = "Rampa";
+            String tipoEspacio = post.getTipoEspacio();
 
             if (tipoEspacio.equals(getResources().getString(R.string.espacio_acensor))) {
               markerOpts =

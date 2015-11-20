@@ -9,6 +9,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -34,6 +35,7 @@ public class PostActivity extends Activity {
   private int maxCharacterCount = Application.getConfigHelper().getPostMaxCharacterCount();
   private ParseGeoPoint geoPoint;
   private ListView listaEspacios;
+  private int posEspacioSeleccionado;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +83,35 @@ public class PostActivity extends Activity {
     EspacioAccesibleAdapter adapter = new EspacioAccesibleAdapter(this, items);
 
     listaEspacios.setAdapter(adapter);
+
+    listaEspacios.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+      @Override
+      public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        posEspacioSeleccionado = position;
+        postEditText.setText("");
+        postEditText.setText(nombreEspacio(posEspacioSeleccionado));
+        post();
+      }
+    });
+  }
+
+  private String nombreEspacio(int posicion) {
+    String nombre = "";
+    ArrayList<EspacioAccesible> array = obtenerItems();
+
+    for (int i = 0; i < array.size(); i++) {
+      if (posicion == 0)
+        nombre = "Ascensor";
+      else if (posicion == 1)
+        nombre = "Baño";
+      else if (posicion == 2)
+        nombre = "Parqueadero";
+      else
+        nombre = "Rampa";
+    }
+
+    return nombre;
   }
 
   private ArrayList<EspacioAccesible> obtenerItems() {
@@ -112,6 +143,7 @@ public class PostActivity extends Activity {
     // Set the location to the current user's location
     post.setLocation(geoPoint);
     post.setText(text);
+    post.setTipoEspacio(text);
     post.setUser(ParseUser.getCurrentUser());
     ParseACL acl = new ParseACL();
 
