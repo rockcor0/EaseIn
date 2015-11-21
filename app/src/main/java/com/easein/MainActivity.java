@@ -854,6 +854,30 @@ public class MainActivity extends FragmentActivity implements LocationListener,
       return mDialog;
     }
   }
-
+  
+  /**
+     * Muestra la información del usuario que coloca el punto <br>
+     */
+    public void mostrarInfoUsuario(Post punto)
+    {
+        String texto = punto.getText();
+        String usuario = punto.getUser().getUsername();
+        int puntaje = punto.getUser().getNumber("puntaje").intValue();
+        String rango = "";
+        
+        if(puntaje >= 0 && puntaje < 31)
+            rango = "Bronce";
+        if(puntaje >=31 && puntaje < 71)
+            rango = "Plata";
+        if(puntaje >= 71)
+            rango = "Oro";
+        
+        Intent info = new Intent(this, InfoFragment.class);
+        info.putExtra("Texto", texto);
+        info.putExtra("Usuario", usuario);
+        info.putExtra("Rango", rango);
+        startActivity(info);
+    }
+  
   //Prueba
 }
