@@ -540,7 +540,7 @@ public final class R {
 		public static final int abc_textfield_search_material = 0x7f02003d;
 		public static final int design_fab_background = 0x7f020068;
 		public static final int design_snackbar_background = 0x7f020069;
-		public static final int notification_template_icon_bg = 0x7f02009c;
+		public static final int notification_template_icon_bg = 0x7f02009d;
 	}
 	public static final class id {
 		public static final int action0 = 0x7f0e00b4;

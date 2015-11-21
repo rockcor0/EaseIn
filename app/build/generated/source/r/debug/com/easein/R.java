@@ -2795,17 +2795,18 @@ containing a value of this type.
         public static final int mr_ic_play_light=0x7f02008f;
         public static final int mr_ic_settings_dark=0x7f020090;
         public static final int mr_ic_settings_light=0x7f020091;
-        public static final int notification_template_icon_bg=0x7f02009c;
+        public static final int notification_template_icon_bg=0x7f02009d;
         public static final int powered_by_google_dark=0x7f020092;
         public static final int powered_by_google_light=0x7f020093;
-        public static final int tagmapa_ascensor=0x7f020094;
-        public static final int tagmapa_ascensor_off=0x7f020095;
-        public static final int tagmapa_banos=0x7f020096;
-        public static final int tagmapa_banos_off=0x7f020097;
-        public static final int tagmapa_parqueadero=0x7f020098;
-        public static final int tagmapa_parqueadero_off=0x7f020099;
-        public static final int tagmapa_rampa=0x7f02009a;
-        public static final int tagmapa_rampa_off=0x7f02009b;
+        public static final int prueba=0x7f020094;
+        public static final int tagmapa_ascensor=0x7f020095;
+        public static final int tagmapa_ascensor_off=0x7f020096;
+        public static final int tagmapa_banos=0x7f020097;
+        public static final int tagmapa_banos_off=0x7f020098;
+        public static final int tagmapa_parqueadero=0x7f020099;
+        public static final int tagmapa_parqueadero_off=0x7f02009a;
+        public static final int tagmapa_rampa=0x7f02009b;
+        public static final int tagmapa_rampa_off=0x7f02009c;
     }
     public static final class id {
         public static final int RelativeLayout1=0x7f0e0085;
